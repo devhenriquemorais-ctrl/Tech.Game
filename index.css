@@ -1,0 +1,140 @@
+:root {
+    --branco: #fff;
+    --azul: #3C4C89;
+    --verme: #580D0D;
+    --cinze: #3A3636;
+    --bnt: #000000;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(background-color);
+}
+
+.item {
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+.item {
+    padding: 15vh;
+    border-radius: 30px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(background-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    text-decoration: none;
+}
+
+nav button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+.text h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.buy {
+    margin-top: 40px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image img {
+    width: 380px;
+    transform: rotate(-15deg);
+    margin-left: 90vh;
+    margin-top: -40vh;
+}
+
+.arrows {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.arrows button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@keyframes toActive{
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+}
+.item.active img{
+    animation:toActive 0.8s ease-in-out 1  ;
+}
+.item.active .text{
+    animation:toActive 0.5s ease-in-out 1  ;
+}
